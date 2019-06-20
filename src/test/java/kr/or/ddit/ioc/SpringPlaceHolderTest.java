@@ -27,8 +27,7 @@ public class SpringPlaceHolderTest {
 		assertEquals("jdbc:oracle:thin:@localhost:1521:xe",dbInfo.getUrl() );
 		assertEquals("pc02",dbInfo.getUsername() );
 		assertEquals("java",dbInfo.getPassword() );
-		
-		
+			
 	}
 
 }
