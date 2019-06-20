@@ -16,7 +16,6 @@ import kr.or.ddit.ioc.collection.IocCollection;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:kr/or/ddit/ioc/application_ioc_collection.xml")
 public class SpringIocCollectionTest {
-
 	
 	@Resource(name="collectionBean")
 	private IocCollection coll;
