@@ -15,7 +15,7 @@ import kr.or.ddit.ioc.placeholder.DbInfo;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:kr/or/ddit/ioc/application-ioc-placeholder.xml")
-public class SpringPlaceHolderTest {
+public class SpringLifecycleTest {
 	
 	@Resource(name="dbInfo")
 	private DbInfo dbInfo;
@@ -27,7 +27,7 @@ public class SpringPlaceHolderTest {
 		assertEquals("jdbc:oracle:thin:@localhost:1521:xe",dbInfo.getUrl() );
 		assertEquals("pc02",dbInfo.getUsername() );
 		assertEquals("java",dbInfo.getPassword() );
-	
+			
 	}
 
 }
