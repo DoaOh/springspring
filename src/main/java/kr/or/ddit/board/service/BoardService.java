@@ -8,6 +8,14 @@ public class BoardService implements IboardService {
 
 	
 	
+	public BoardService() {
+	}
+	
+	public BoardService(IboardDao boardDao) {
+		this.boardDao = boardDao;
+	}
+	
+	
 	public IboardDao getBoardDao() {
 		return boardDao;
 	}
