@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- vo객체는 값을 운반하려는 목적이기 떄문에 spring 빈으로 등록하는 경우는 없다 -->
+
+	<bean id="UserVo" class="kr.or.ddit.user.model.UserVo">
+		<!-- setter주입 -->
+		<property name="userId" value="brown" />
+		<property name="birth" value="2019-08-08" />
+	</bean>
+
+	<!-- id는 java 고정값임 -->
+
+	<bean id="conversionService"
+		class="org.springframework.context.support.ConversionServiceFactoryBean">
+		<property name="converters">
+			<set>
+				<bean class="kr.or.ddit.typeConvert.StringDateConvert">
+					<property name="pattern" value="yyyy-MM-dd" />
+				</bean>
+			</set>
+		</property>
+
+	</bean>
+
+
+	<bean id="CustomEditorConfigurer"
+		class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+		<property name="propertyEditorRegistrars">
+			<list>
+				<bean class="kr.or.ddit.typeConvert.CustomDateRegister" />
+			</list>
+		</property>
+	</bean>
+
+
+
+	<!-- <bean id="dataEditor" -->
+	<!-- class="org.springframework.beans.propertyeditors.CustomDateEditor"> -->
+
+	<!-- <constructor-arg> -->
+	<!-- <bean class="java.text.SimpleDateFormat"> -->
+	<!-- <constructor-arg value="yyyy-MM-dd" /> -->
+	<!-- </bean> -->
+	<!-- </constructor-arg> -->
+
+	<!-- <constructor-arg value="true" /> -->
+	<!-- </bean> -->
+
+
+
+</beans>
