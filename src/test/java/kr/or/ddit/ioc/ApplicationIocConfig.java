@@ -28,7 +28,7 @@ public class ApplicationIocConfig {
 	
 	
 	// 장점 에러가 있는지 바로 알수있다
-	
+	//스프링빈의 이름은 메소그 이름이 기본으로 적용된다
 	@Bean
 	public BoardService boardService() {
 		BoardService boardService =new BoardService();
