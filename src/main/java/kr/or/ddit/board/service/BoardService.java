@@ -5,9 +5,18 @@ import kr.or.ddit.board.dao.IboardDao;
 public class BoardService implements IboardService {
 	
 	private IboardDao boardDao;
+	private String name;
 
 	
 	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	public BoardService() {
 	}
 	
@@ -24,6 +33,8 @@ public class BoardService implements IboardService {
 		this.boardDao = boardDao;
 	}
 
+	
+	
 	
 	@Override
 	public String sayHello() {
