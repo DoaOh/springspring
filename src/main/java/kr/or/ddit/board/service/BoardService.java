@@ -39,10 +39,6 @@ public class BoardService implements IboardService {
 	}
 
 	
-
-	
-	
-	
 	@Override
 	public String sayHello() {
 		return boardDao.sayHello();
