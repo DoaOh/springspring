@@ -32,7 +32,6 @@ public class UserDaoTest extends LogicTestEnv {
 
 	}
 	
-
 	@Test
 	public void getUserTest() {
 		/*** Given ***/
