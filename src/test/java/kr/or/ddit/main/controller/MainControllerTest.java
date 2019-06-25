@@ -73,11 +73,65 @@ public class MainControllerTest extends ControllerTestEnv{
 	 mockMvc.perform(get("/main"))
 				.andExpect(status().isOk())
 		        .andExpect(view().name("main"))
+		        .andExpect(model().attributeExists("rangers"))
+		        .andExpect(model().attributeExists("userVo"))
 		.andExpect(model().attribute("mainUserId", "brown"));
 		
 			
 	}
 
 	
+	
+	
+	
+	@Test
+	public void mainViewmavTest() throws Exception {
+		/***Given***/
+		
+		/***When***/
+		MvcResult mvcResult = mockMvc.perform(get("/main")).andReturn();
+		ModelAndView mav = mvcResult.getModelAndView();
+		
+		
+		String viewName =mav.getViewName();
+		String userId = (String) mav.getModel().get("mainUserId");
+
+		/***Then***/
+		assertEquals("main", viewName);	
+		assertEquals("brown", userId);
+		assertNotNull(mav.getModel().get("rangers"));
+	}
+	
+	
+	@Test
+	public void patavariableTest() throws Exception {
+		/***Given***/
+		
+		mockMvc.perform(get("/main/pathvariable/dkskqk00"))
+		.andExpect(status().is(200))
+		.andExpect(view().name("main"));
+
+		/***When***/
+
+		/***Then***/
+		
+	}
+	
+	
+	@Test
+	public void headerTest() throws Exception {
+		/***Given***/
+		
+
+		/***When***/
+		
+		mockMvc.perform(get("/main/header").accept("text/html"))
+		.andExpect(status().is(200))
+		.andExpect(view().name("main"));
+		
+	
+		/***Then***/
+		
+	}
 	
 }

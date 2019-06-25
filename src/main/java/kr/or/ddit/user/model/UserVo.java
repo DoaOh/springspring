@@ -23,7 +23,6 @@ public class UserVo {
 	
 	public UserVo(String userId, String name, String alias, String pass,
 			String addr1, String addr2, String zipcd, Date birth) {
-		super();
 		this.userId = userId;
 		this.name = name;
 		this.alias = alias;
@@ -45,13 +44,17 @@ public class UserVo {
 		this.name = name;
 	}
 
+	
+
 	public String getUserId() {
 		return userId;
 	}
 
-	public void setUserId(String userid) {
+
+	public void setUserId(String userId) {
 		this.userId = userId;
 	}
+
 
 	public String getAlias() {
 		return alias;

@@ -8,7 +8,7 @@
 		<li class="active"><a href="${cp}/userList">/user/userList.jsp</a></li>
 		
 		<!-- a 태그는 기본적으로 get방식을 사용 -->
-		<li class="active"><a href="${cp}/userPagingList">/user/pagination.jsp</a></li>
+		<li class="active"><a href="${cp}/userPagingList">/user/userPagingList.jsp</a></li>
 		
 		<!-- a 태그는 기본적으로 get방식을 사용 -->
 		<li class="active"><a href="${cp}/lprodpagination">Lprod_PageList</a></li>

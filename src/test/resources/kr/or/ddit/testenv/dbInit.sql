@@ -74,7 +74,7 @@ Insert into PC02_TEST.USERS (USERID,NAME,ALIAS,PASS,ADDR1,ADDR2,ZIPCD,BIRTH,PATH
 Insert into PC02_TEST.USERS (USERID,NAME,ALIAS,PASS,ADDR1,ADDR2,ZIPCD,BIRTH,PATH,FILENAME) values ('user94','사용자94','사용자별명94','brown1234',null,null,null,null,null,null);
 Insert into PC02_TEST.USERS (USERID,NAME,ALIAS,PASS,ADDR1,ADDR2,ZIPCD,BIRTH,PATH,FILENAME) values ('user96','사용자96','사용자별명96','brown1234',null,null,null,null,null,null);
 Insert into PC02_TEST.USERS (USERID,NAME,ALIAS,PASS,ADDR1,ADDR2,ZIPCD,BIRTH,PATH,FILENAME) values ('user98','사용자98','사용자별명98','brown1234',null,null,null,null,null,null);
-Insert into PC02_TEST.USERS (USERID,NAME,ALIAS,PASS,ADDR1,ADDR2,ZIPCD,BIRTH,PATH,FILENAME) values ('brown','오렌지','오렌지','c6347b73d5b1f7c77f8be828ee3e871c819578f23779c7d5e082ae2b36a44','������ �߱� �߾ӷ�76','���κ��� 2�� ������簳�߿�','34940',to_date('00/08/08','RR/MM/DD'),'D:\upload\brown.png','brown.png');
+Insert into PC02_TEST.USERS (USERID,NAME,ALIAS,PASS,ADDR1,ADDR2,ZIPCD,BIRTH,PATH,FILENAME) values ('brown','오렌지','오렌지','c6347b73d5b1f7c77f8be828ee3e871c819578f23779c7d5e082ae2b36a44','1','1','34940',to_date('00/08/08','RR/MM/DD'),'D:\upload\brown.png','brown.png');
 Insert into PC02_TEST.USERS (USERID,NAME,ALIAS,PASS,ADDR1,ADDR2,ZIPCD,BIRTH,PATH,FILENAME) values ('user52','사용자52','사용자별명52','brown1234',null,null,null,null,null,null);
 Insert into PC02_TEST.USERS (USERID,NAME,ALIAS,PASS,ADDR1,ADDR2,ZIPCD,BIRTH,PATH,FILENAME) values ('user53','사용자53','사용자별명53','brown1234',null,null,null,null,null,null);
 Insert into PC02_TEST.USERS (USERID,NAME,ALIAS,PASS,ADDR1,ADDR2,ZIPCD,BIRTH,PATH,FILENAME) values ('user55','사용자55','사용자별명55','brown1234',null,null,null,null,null,null);

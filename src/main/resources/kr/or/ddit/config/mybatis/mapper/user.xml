@@ -25,7 +25,7 @@
 	<!--  pageVo int page, int pageSize -->
 	<!-- 페이지로 띄워줄 것이 UserVo니까 resultType은 UserVo여야함  -->
 	
-<!-- 	<select id="userPagingList" parameterType="pageVo" resultType="UserVo">
+<select id="userPagingList" parameterType="pageVo" resultType="UserVo">
 		<![CDATA[
 		select *
 		from
@@ -37,7 +37,7 @@
 		where rn >=(#{page}-1)*#{pageSize}+1 and rn <= #{page}*#{pageSize}
 		]]>
 	</select>
-	 -->
+	
 	<!-- 사용자 전체 수 조회 -->
 	<select id="usersCnt" resultType="int">
 		select count(*)
