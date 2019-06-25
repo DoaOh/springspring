@@ -16,7 +16,7 @@ import kr.or.ddit.board.dao.IboardDao;
 import kr.or.ddit.board.service.IboardService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("classpath:kr/or/ddit/ioc/application-ioc-text.xml")
+@ContextConfiguration("classpath:kr/or/ddit/ioc/application-ioc-test.xml")
 public class SpringIocJunitTest {
 	
 	//di방법

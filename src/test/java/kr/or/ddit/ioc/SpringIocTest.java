@@ -11,9 +11,6 @@ import kr.or.ddit.board.service.IboardService;
 public class SpringIocTest {
 
 	
-	
-	
-	
 	/**
 	 * Method : test
 	 * 작성자 : PC02
@@ -24,7 +21,7 @@ public class SpringIocTest {
 	public void SpringIocTest() {
 		/***Given***/
 		//스프링컨테이너 생성
-		ApplicationContext context = new ClassPathXmlApplicationContext("classpath:kr/or/ddit/ioc/application-ioc-text.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("classpath:kr/or/ddit/ioc/application-ioc-test.xml");
 
 		/***When***/
 		

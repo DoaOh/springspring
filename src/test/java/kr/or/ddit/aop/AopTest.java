@@ -22,7 +22,7 @@ public class AopTest {
 	private IboardService boardService;
 	
 	@Test
-	public void test() {
+	public void aopBeforeTest() {
 		/***Given***/
 		
 		/***When***/

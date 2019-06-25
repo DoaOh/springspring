@@ -38,7 +38,7 @@ public class UserServiceTest extends LogicTestEnv {
 		/***Then***/
 		assertNotNull(userService);
 		assertTrue(userList.size()>=100);
-		assertEquals(111, userList.size());
+		assertEquals(103, userList.size());
 		
 	}
 
@@ -48,14 +48,16 @@ public class UserServiceTest extends LogicTestEnv {
 
 	@Test
 	public void getUserTest() {
+
+		
 		/*** Given ***/
-		String userId = "brown";
+		String userId = "user97";
 
 		/*** When ***/
 		UserVo uservo = userService.getUser(userId);
 
 		/*** Then ***/
-		assertEquals("브라운", uservo.getName());
+		assertEquals("brown1234", uservo.getPass());
 		
 	}
 

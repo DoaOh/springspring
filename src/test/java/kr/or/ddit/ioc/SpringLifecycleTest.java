@@ -21,6 +21,12 @@ public class SpringLifecycleTest {
 	private DbInfo dbInfo;
 	
 
+	/** 
+	 * Method   : placeHolderTest
+	 * 작성자 : pc02
+	 * 변경이력 :  
+	 * Method 설명 : spring placeholder test
+	 */
 	@Test
 	public void test() {
 		assertEquals("oracle.jdbc.driver.OracleDriver",dbInfo.getDriver() );

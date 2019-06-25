@@ -8,13 +8,6 @@ public interface IuserDao {
 	
 	
 	
-	/**
-	 * Method : userList
-	 * 작성자 : PC02
-	 * 변경이력 :
-	 * @return
-	 * Method 설명 : 
-	 */
 	List<UserVo> userList();
 
 	int insertUser(UserVo userVo);

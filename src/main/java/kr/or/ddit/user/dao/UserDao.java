@@ -39,7 +39,6 @@ import kr.or.ddit.user.model.UserVo;
 
 		@Override
 		public int usersCnt() {
-			// TODO Auto-generated method stub
 			return sqlSession.selectOne("user.usersCnt");
 		}
 

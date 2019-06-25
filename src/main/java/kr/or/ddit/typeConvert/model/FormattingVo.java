@@ -1,34 +1,22 @@
 package kr.or.ddit.typeConvert.model;
 
 import java.util.Date;
-
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.NumberFormat;
 
-
-
 public class FormattingVo {
 	
-	@DateTimeFormat(pattern="yyyy-MM-dd")
-	private Date reg_dt; 
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private Date reg_dt;	//등록일
 	
-	@DateTimeFormat(pattern="dd-MM-yyyy")
-	private Date mod_dt;
-
-	@NumberFormat(pattern = "#,###")
+	@DateTimeFormat(pattern = "MM-dd-yyyy")
+	private Date mod_dt;	//수정일
+	
+	@NumberFormat(pattern="#,###")
 	private int number;
 	
-	
-	
 	public FormattingVo() {
-	}
-	
-	public int getNumber() {
-		return number;
-	}
-
-	public void setNumber(int number) {
-		this.number = number;
+		
 	}
 	
 	public Date getReg_dt() {
@@ -43,8 +31,11 @@ public class FormattingVo {
 	public void setMod_dt(Date mod_dt) {
 		this.mod_dt = mod_dt;
 	}
+	public int getNumber() {
+		return number;
+	}
+	public void setNumber(int number) {
+		this.number = number;
+	}
 	
-	
-	
-
 }

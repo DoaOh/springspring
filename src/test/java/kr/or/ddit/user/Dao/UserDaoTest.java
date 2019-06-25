@@ -28,20 +28,20 @@ public class UserDaoTest extends LogicTestEnv {
 
 		/*** Then ***/
 		assertNotNull(userDao);
-		assertEquals(110, userList.size());
+		assertEquals(103, userList.size());
 
 	}
 	
 	@Test
 	public void getUserTest() {
 		/*** Given ***/
-		String userId = "brown";
+		String userId = "user97";
 
 		/*** When ***/
 		UserVo uservo = userDao.getUser(userId);
 
 		/*** Then ***/
-		assertEquals("브라운", uservo.getName());
+		assertEquals("brown1234", uservo.getPass());
 		
 	}
 
@@ -56,7 +56,7 @@ public class UserDaoTest extends LogicTestEnv {
 		int usersCnt = userDao.usersCnt();
 
 		/*** Then ***/
-		assertEquals(105, usersCnt);
+		assertEquals(103, usersCnt);
 	}
 
 	// userVo가 등록이 되는지 안되는지 Test하는 코드!

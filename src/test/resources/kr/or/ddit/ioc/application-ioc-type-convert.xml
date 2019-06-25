@@ -11,13 +11,20 @@
 		<property name="birth" value="2019-08-08" />
 	</bean>
 
-	<!-- id는 java 고정값임 -->
-
+	<!-- id는 conversionService로 고정되어있다!! 스프링 내부에서 사용 -->
+	<bean id="customEditorConfigurer" class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+			<property name="propertyEditorRegistrars">
+				<list>
+					<bean class="kr.or.ddit.typeConvert.CustomDateRegistry"/>
+				</list>
+			</property>
+	</bean>
+	
 	<bean id="conversionService"
 		class="org.springframework.context.support.ConversionServiceFactoryBean">
 		<property name="converters">
 			<set>
-				<bean class="kr.or.ddit.typeConvert.StringDateConvert">
+				<bean class="kr.or.ddit.typeConvert.StringDateConverter">
 					<property name="pattern" value="yyyy-MM-dd" />
 				</bean>
 			</set>
@@ -26,15 +33,7 @@
 	</bean>
 
 
-	<bean id="CustomEditorConfigurer"
-		class="org.springframework.beans.factory.config.CustomEditorConfigurer">
-		<property name="propertyEditorRegistrars">
-			<list>
-				<bean class="kr.or.ddit.typeConvert.CustomDateRegister" />
-			</list>
-		</property>
-	</bean>
-
+	
 
 
 	<!-- <bean id="dataEditor" -->
