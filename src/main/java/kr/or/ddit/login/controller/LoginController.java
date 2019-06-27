@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import kr.or.ddit.encrypt.kisa.sha256.KISA_SHA256;
 import kr.or.ddit.user.model.UserVo;
 import kr.or.ddit.user.service.IuserService;
 
@@ -35,13 +36,11 @@ public class LoginController {
 	public String loginProcess(String userId, String password, String rememberme, HttpServletResponse response,
 			HttpSession session) {
 
-		//String encryptPassword = KISA_SHA256.encrypt(password);
-		
+		String encryptPassword = KISA_SHA256.encrypt(password);
 		UserVo userVo = userService.getUser(userId);
-
 		//String password2 =userVo.getPass();
 				
-		if (userVo != null && password.equals(userVo.getPass())) {
+		if (userVo != null && encryptPassword.equals(userVo.getPass())) {
 			rememberMeCookie(userId, rememberme, response);
 
 			session.setAttribute("USER_INFO", userVo);

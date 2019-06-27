@@ -17,7 +17,7 @@ import kr.or.ddit.user.model.UserVo;
 		@Resource(name="sqlSession")
 		private SqlSessionTemplate sqlSession;
 
-		
+	
 		@Override
 		public List<UserVo> userList() {
 			
@@ -25,13 +25,11 @@ import kr.or.ddit.user.model.UserVo;
 		}
 
 		
-		
 		@Override
 		public int insertUser(UserVo userVo) {
 			return sqlSession.insert("user.insertUser",userVo);
 		}
 
-		
 		
 		@Override
 		public int deleteUser(String userId) {

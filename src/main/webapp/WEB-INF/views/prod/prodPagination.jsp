@@ -18,7 +18,7 @@
 <meta name="author" content="">
 <link rel="icon" href="../../favicon.ico">
 
-<title>lprod</title>
+<title>prod</title>
 
 <!-- LibLib(Css,js) -->
 <%@include file="/WEB-INF/views/common/basicLib.jsp"%>
@@ -31,36 +31,35 @@
 	<div class="container-fluid">
 		<div class="row">
 
-			<!--  left영역 -->
+			
 			<%@include file="/WEB-INF/views/common/left.jsp"%>
 
 			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 
 				<div class="row">
 					<div class="col-sm-8 blog-main">
-						<h2 class="sub-header">Lprod</h2>
+						<h2 class="sub-header">Prod</h2>
 						<div class="table-responsive">
 							<table class="table table-striped">
 								<tr>
-									<th>ID</th>
-									<th>GU</th>
-									<th>NM</th>
+									<th>name</th>
+									<th>price</th>
+									<th>outline</th>
 									
 								</tr>
 
-								<c:forEach items="${lprodList }" var="lprod">
+								<c:forEach items="${prodList }" var="prod">
 									<tr>
-										<td>${lprod.lprod_id }</td>
-										<td>${lprod.lprod_gu }</td>
-										<td>${lprod.lprod_nm }</td>
-										
+										<td>${prod.prod_name }</td>
+										<td>${prod.prod_price }</td>
+										<td>${prod.prod_outline}</td>
+										<td></td>
 									</tr>
 								</c:forEach>
 							</table>
 						</div>
 
 					
-
 
 						<div class="text-center">
 							<ul class="pagination">

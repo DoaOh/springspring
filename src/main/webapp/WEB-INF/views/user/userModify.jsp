@@ -27,7 +27,6 @@
 <script>
 
 	$(document).ready(function(){
-		
 		var msg = '${msg}';
 		if(msg != '')
 			alert(msg);
@@ -43,11 +42,7 @@
    		    }).open();
     	});
     	
-    	//사용자 등록 버튼 클릭 이벤트 헨들러
     	$("#userRegBtn").on('click', function(){
-			//유효성 체크!
-			
-			//여기까지 도달하면 유효성 검사 완료 -->(submit) 
 			$("#frm").submit();
 			
     	});
@@ -75,7 +70,7 @@
 					<div class="col-sm-8 blog-main">
 						<h2 class="sub-header">사용자 수정</h2>
 						
-						<form id="frm" class="form-horizontal" role="form" action="${cp }/UserModifyController" method="post"
+						<form id="frm" class="form-horizontal" role="form" action="${cp }/user/modify" method="post"
 						enctype="multipart/form-data">
 						
 							<div class="form-group">
@@ -115,8 +110,8 @@
 							
 							<div class="form-group">
 								<label for="userNm" class="col-sm-2 control-label">생일&nbsp;&nbsp; :  </label>
-								<div class="col-sm-10">																		<!--  -->
-									<input type="date" class="form-control" id="birth" name="birth" placeholder="생일" value="${userVo.birthStr }" /> 
+								<div class="col-sm-10">																		
+									<input type="date" class="form-control" id="birth" name="birth" placeholder="생일" value="${userVo.birthStr }" pattern="yyyy-MM-dd" /> 
 								</div>
 							</div>
 							

@@ -3,14 +3,14 @@
     
 <div class="col-sm-3 col-md-2 sidebar">
 	<ul class="nav nav-sidebar">
-		<li class="active"><a href="${cp}/main.jsp">Main.jsp</a></li>
+		<li class="active"><a href="${cp}/main">Main.jsp</a></li>
 	
-		<li class="active"><a href="${cp}/userList">/user/userList.jsp</a></li>
+		<li class="active"><a href="${cp}/user/list">전체 사용자 리스트</a></li>
 		
-		<!-- a 태그는 기본적으로 get방식을 사용 -->
-		<li class="active"><a href="${cp}/userPagingList">/user/userPagingList.jsp</a></li>
+		<li class="active"><a href="${cp}/user/pagingList">사용자리스트</a></li>
 		
-		<!-- a 태그는 기본적으로 get방식을 사용 -->
-		<li class="active"><a href="${cp}/lprodpagination">Lprod_PageList</a></li>
+		<li class="active"><a href="${cp}/lprodpagination">LPROD</a></li>
+		
+		<li class="active"><a href="${cp}/prodpagination">PROD</a></li>
 	</ul>
 </div>

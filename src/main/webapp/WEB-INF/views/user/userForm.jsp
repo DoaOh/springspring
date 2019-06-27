@@ -8,6 +8,7 @@
 <!-- core라이브러리를 쓸꺼니까! uri 잘 확인 -->
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"  %>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -85,7 +86,7 @@
 					<div class="col-sm-8 blog-main">
 						<h2 class="sub-header">사용자 등록</h2>
 						
-						<form id="frm" class="form-horizontal" role="form" action="${cp }/userForm" method="post" 
+						<form id="frm" class="form-horizontal" role="form" action="${cp }/user/form" method="post" 
 							enctype="multipart/form-data">
 						
 							<div class="form-group">
@@ -99,6 +100,8 @@
 								<label for="userNm" class="col-sm-2 control-label">사용자아이디&nbsp;&nbsp; :  </label>
 								<div class="col-sm-10">
 									<input type="text" class="form-control" id="userId"	name="userId" placeholder="아이디" value="${param.userId }" /> 
+									   	<form:errors path="userVo.userId"/>
+								
 								</div>
 							</div>
 							
@@ -106,6 +109,7 @@
 								<label for="userNm" class="col-sm-2 control-label">사용자이름&nbsp;&nbsp; :  </label>
 								<div class="col-sm-10">
 									<input type="text" class="form-control" id="name" name="name" placeholder="이름" value="${param.name }" /> 
+<%--                                        <form:errors path="userVo.name"/> --%>
 								</div>
 							</div>
 							

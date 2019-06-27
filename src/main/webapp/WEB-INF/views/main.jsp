@@ -64,6 +64,8 @@
 			
 			<h3>상세내역</h3>
 			<p>JSP과정에서는 다음과 같은 내용을 학습한다.</p>
+				
+			
 			<ul>
 				<li>${userVo}</li>
 				<li>servlet 동작원리</li>
@@ -73,6 +75,9 @@
 				<li>jstl</li>
 				<li>db pooling</li>
 				<li>페이지 모듈화</li>
+			
+				
+				
 			</ul>
 		</div>
 	</div>

@@ -25,6 +25,18 @@
 
 <!-- LibLib(Css,js) -->
 <%@include file="/WEB-INF/views/common/basicLib.jsp"%>
+
+<script>
+
+	$(document).ready(function(){
+		var msg = '${msg}';
+		if(msg != '')
+			alert(msg);
+		
+	});
+			
+</script>
+
 </head>
 
 <body>
@@ -42,14 +54,13 @@
 					<div class="col-sm-8 blog-main">
 						<h2 class="sub-header">사용자 상세정보</h2>
 						
-						<form id="frm" class="form-horizontal" role="form" action="${cp }/UserModifyController" method="get">
+						<form id="frm" class="form-horizontal" role="form" action="${cp }/user/modify" method="get">
 							<input value="${userVo.userId }" type="hidden" id="userId" name="userId">
 							
 							<div class="form-group">
 								<label for="userNm" class="col-sm-2 control-label">사용자 사진&nbsp;&nbsp; :  </label>
 								<div class="col-sm-10">
-								
-									<img src="${cp }/profile?userId=${userVo.userId}">
+									<img src="${cp }/user/profile?userId=${userVo.userId}">
 								</div>
 							</div>
 						
