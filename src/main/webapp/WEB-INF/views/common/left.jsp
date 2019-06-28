@@ -12,5 +12,10 @@
 		<li class="active"><a href="${cp}/lprodpagination">LPROD</a></li>
 		
 		<li class="active"><a href="${cp}/prodpagination">PROD</a></li>
+		
+		<li class="active"><a href="${cp}/user/pagingListAjax">사용자리스트ajax</a></li>
+		
+		<li class="active"><a href="${cp}/user/pagingListAjaxView">사용자리스트ajax</a></li>
+		
 	</ul>
 </div>

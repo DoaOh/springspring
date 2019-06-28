@@ -19,4 +19,20 @@
  <put-attribute name="body" value="/WEB-INF/views/user/userPagingList.jsp"></put-attribute>
  </definition> 
  
+ <!-- locale view -->
+ 
+ <definition name="tiles.locale" extends="layout">
+ <put-attribute name="body" value="/WEB-INF/views/locale/locale.jsp"></put-attribute>
+ </definition> 
+ 
+ 
+ <definition name="tiles.ajaxview" extends="layout">
+ <put-attribute name="body" value="/WEB-INF/views/ajax/ajaxView.jsp"></put-attribute>
+ </definition> 
+ 
+ 
+  <definition name="tiles.pagingListAjaxView" extends="layout">
+ <put-attribute name="body" value="/WEB-INF/views/user/userPagingListAjax.jsp"></put-attribute>
+ </definition> 
+ 
  </tiles-definitions>

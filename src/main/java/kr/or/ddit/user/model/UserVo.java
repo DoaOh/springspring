@@ -46,16 +46,11 @@ public class UserVo {
 	}
 
 
-
-	public String getBirthStr() {
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-		String date = sdf.format(birth);
-		if (date == null) {
-			return "";
-		}
-		return date;
-	}
-	
+	/*
+	 * public String getBirthStr() { SimpleDateFormat sdf = new
+	 * SimpleDateFormat("yyyy-MM-dd"); String date = sdf.format(birth); if (date ==
+	 * null) { return ""; } return date; }
+	 */
 	
 	public String getName() {
 		return name;

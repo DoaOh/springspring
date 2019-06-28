@@ -10,8 +10,6 @@
 
 	<!-- @controller Service Repositort @Component -->
 
-
-
 	<context:component-scan
 		base-package="kr.or.ddit" use-default-filters="false">
 		<context:include-filter type="annotation"
@@ -103,20 +101,19 @@
 		<property name="basenames">
 			<list>
 				<value>classpath:kr/or/ddit/msg/error</value>
+				<value>classpath:kr/or/ddit/msg/msg</value>
 			</list>
 		</property>
 	</bean>
 
 
+<!-- localeResolver -->
+
+<bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+</bean>
 
 
 
-	<!-- <bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver"> 
-		<bean class="org.springframework.web.servlet.view.tiles2.TilesViewResolver"> 
-		<property name="order" value="1" /> <property name="viewClass" value="org.springframework.web.servlet.view.tiles2.TilesView"/> 
-		</bean> <bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer"> 
-		<property name="definitions"> <list> <value>/WEB-INF/config/tiles/tiles.xml</value> 
-		</list> </property> <property name="preparerFactoryClass" value="org.springframework.web.servlet.view.tiles2.SpringBeanPreparerFactory"/> 
-		</bean> -->
+
 
 </beans>

@@ -97,6 +97,47 @@ public class UserController {
 		return "tiles.userPagingList";
 	}
 
+	
+	
+	
+	
+	@RequestMapping("/pagingListAjax")
+	public String userpagingListAjax(PageVo pageVo, Model model) {
+		//Map<String, Object> resultMap = userService.userPagingList(pageVo);
+
+		//List<UserVo> userList = (List<UserVo>) resultMap.get("userList");
+		
+		model.addAttribute("data", userService.userPagingList2(pageVo));
+	
+		return "user/userpagingListAjaxHtml";
+	}
+
+	
+	
+	
+
+	@RequestMapping("/pagingListAjaxHtml")
+	public String userpagingListAjaxHtml(PageVo pageVo, Model model) {
+		
+		
+		model.addAttribute("data", userService.userPagingList2(pageVo));
+	
+		return "jsonView";
+	}
+
+	
+	
+	@RequestMapping("/pagingListAjaxView")
+	public String userpagingListAjaxView() {
+		logger.debug("@@@@@@@@@@@@@@@@@@@@@@@");
+		return "tiles.pagingListAjaxView";
+		
+	}
+
+	
+	
+	
+	
 	@RequestMapping("/user")
 	public String user(String userId, Model model) {
 

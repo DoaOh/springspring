@@ -54,6 +54,7 @@
 		                 classpath:/kr/or/ddit/config/spring/rootContext.xml
 						 classpath:kr/or/ddit/config/spring/application-datasource.xml
 						 classpath:kr/or/ddit/config/spring/application-transaction.xml
+						 
 		</param-value>
 	</context-param>
 
@@ -74,7 +75,7 @@
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
 			<param-value>classpath:/kr/or/ddit/config/spring/application-context.xml
-<!--  classpath:/kr/or/ddit/config/spring/application-interceptor.xml -->
+						classpath:/kr/or/ddit/config/spring/application-interceptor.xml 
 			</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
