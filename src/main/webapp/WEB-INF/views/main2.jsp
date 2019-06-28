@@ -1,10 +1,19 @@
-
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.Date"%>
+<%@page import="kr.or.ddit.user.model.UserVo"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"  %>
+<!DOCTYPE html>
+<html lang="en">
 
+
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+				
 
 <div class="blog-header">
-	<h1 class="blog-title">Main  TILES</h1>
+	<h1 class="blog-title">Main</h1>
 	<p class="lead blog-description">Jsp / Spring.</p>
 </div>
 
@@ -15,7 +24,11 @@
 		<div class="blog-post">
 			<h2 class="blog-post-title">JSP</h2>
 			<p id="p1" class="blog-post-meta">
-			
+			<%
+				Date date = new Date();
+				SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+			%>
+				<%=sdf.format(date) %>, room 204
 			<!-- Date를 el형식으로 어찌 바꾸지??? -->
 			</p>
 
@@ -27,7 +40,7 @@
 				
 			
 			<ul>
-				
+				<li>${userVo}</li>
 				<li>servlet 동작원리</li>
 				<li>jsp와 servlet의 관계</li>
 				<li>jsp 스크립틀릿 요소</li>
@@ -42,7 +55,7 @@
 		</div>
 	</div>
 	
-</div>	
+</div>	</div>
 
 
 </html>

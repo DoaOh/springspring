@@ -49,31 +49,7 @@ public class logincontrollerTest  extends ControllerTestEnv{
 
 	}
 
-	
-	@Test
-	public void loginProcessTest() throws Exception{
-		
-		/***Given***/
-		String userId="dkskqk00";
-		String password="dkskqk00";
-		
-		MvcResult mvcResult= mockMvc.perform(post("/login").param("userId", userId).param("password", password)).andReturn();
-		
-		ModelAndView mav = mvcResult.getModelAndView();
-		HttpSession session= mvcResult.getRequest().getSession();
-		UserVo userVo=(UserVo) session.getAttribute("USER_INFO");
-		String viewName =mav.getViewName();
-			
-		/***When***/
 
-		
-		/***Then***/
-		assertEquals("main", viewName);	
-		assertEquals("dkskqk00", userVo.getName());	
-		assertEquals("dkskqk00", userVo.getPass());	
-	}
-	
-	
 	
 	
 	@Test
