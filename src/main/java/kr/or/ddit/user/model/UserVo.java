@@ -1,17 +1,25 @@
 package kr.or.ddit.user.model;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlRootElement;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+@XmlRootElement(name="userVo")
 public class UserVo {
 	
 	@Size(min=4)
 	private String userId;
 	
+	@Override
+	public String toString() {
+		return "UserVo [userId=" + userId + ", name=" + name + ", alias=" + alias + ", pass=" + pass + ", addr1="
+				+ addr1 + ", addr2=" + addr2 + ", zipcd=" + zipcd + ", birth=" + birth + ", path=" + path
+				+ ", fileName=" + fileName + "]";
+	}
+
 	private String name;
 	private String alias;
 	private String pass;
@@ -136,12 +144,6 @@ public class UserVo {
 
 	public void setFilename(String filename) {
 		this.fileName = filename;
-	}
-
-	@Override
-	public String toString() {
-		return "UserVo [name=" + name + ", userid=" + userId + ", alias="
-				+ alias  + "]";
 	}
 
 	
